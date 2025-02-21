@@ -1,16 +1,16 @@
 name: better_open_file
 description: This is a fork from a plug-in that can call native APP to open files with string result in flutter, support iOS(UTI) / android(intent) / PC(ffi) / web(dart:html)
-version: 3.6.5
+version: 3.6.6
 homepage: https://github.com/bertoldofonseca/better_open_file
 
 dependencies:
   flutter:
     sdk: flutter
-  ffi: ^2.0.1
+  ffi: ^2.1.4
 
 environment:
-  sdk: '>=2.17.0 <4.0.0'
-  flutter: ">=1.12.0"
+  sdk: '>=3.6.1 <4.0.0'
+  flutter: ">=3.29.0"
 
 flutter:
   plugin:

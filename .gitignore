@@ -6,3 +6,7 @@
 pubspec.lock
 
 build/
+example/android/.idea/*
+example/android/app/.cxx/*
+example/ios/Flutter/*
+android/.idea/*

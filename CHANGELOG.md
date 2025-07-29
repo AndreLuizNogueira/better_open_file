@@ -1,5 +1,9 @@
 # Changes
 
+## 3.6.7
+
+Atializado Pacotes e Java para 17;
+
 ## 3.6.6
 
 on example app, Upgrade From Imperative mode, Upgrade Packages, Gradle, Kotlin, ndkVersion, namespace;

@@ -1,5 +1,9 @@
 # Changes
 
+## 3.6.8 - 10-03-2026
+
+Atualizado Dependências;
+
 ## 3.6.7
 
 Atializado Pacotes e Java para 17;

@@ -12,9 +12,9 @@ A new Flutter project.
   s.license             = { :file => '../LICENSE' }
   s.author              = { 'Your Company' => 'email@example.com' }
   s.source              = { :path => '.' }
-  s.source_files        = 'Classes/**/*'
-  s.public_header_files = 'Classes/**/*.h'
+  s.source_files        = 'better_open_file/Sources/better_open_file/**/*.{h,m}'
+  s.public_header_files = 'better_open_file/Sources/better_open_file/include/**/*.h'
   s.dependency 'Flutter'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '13.0'
 end

@@ -1,5 +1,11 @@
 # Changes
 
+## 3.6.9 - 01-07-2026
+
+- Migração do build Android para o Built-in Kotlin (removidos warnings do Kotlin Gradle Plugin).
+- Migração da estrutura do iOS para Swift Package Manager (SPM) mantendo compatibilidade com CocoaPods.
+- Remoção de dependências legadas (`legacy-support-v4`) e desativação do Jetifier para evitar estouro de memória no Gradle build.
+
 ## 3.6.8 - 10-03-2026
 
 Atualizado Dependências;

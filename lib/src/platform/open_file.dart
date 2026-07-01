@@ -14,11 +14,13 @@ class OpenFile {
   OpenFile._();
 
   ///linuxDesktopName like 'xdg'/'gnome'
-  static Future<OpenResult> open(String? filePath,
-      {String? type,
-      String? uti,
-      String linuxDesktopName = "xdg",
-      bool linuxByProcess = false}) async {
+  static Future<OpenResult> open(
+    String? filePath, {
+    String? type,
+    String? uti,
+    String linuxDesktopName = "xdg",
+    bool linuxByProcess = false,
+  }) async {
     assert(filePath != null);
     if (!Platform.isIOS && !Platform.isAndroid) {
       int _result;
@@ -28,11 +30,14 @@ class OpenFile {
       } else if (Platform.isLinux) {
         var filePathLinux = Uri.file(filePath!);
         if (linuxByProcess) {
-          _result =
-              Process.runSync('xdg-open', [filePathLinux.toString()]).exitCode;
+          _result = Process.runSync('xdg-open', [
+            filePathLinux.toString(),
+          ]).exitCode;
         } else {
-          _result = linux
-              .system(['$linuxDesktopName-open', filePathLinux.toString()]);
+          _result = linux.system([
+            '$linuxDesktopName-open',
+            filePathLinux.toString(),
+          ]);
         }
       } else if (Platform.isWindows) {
         _windowsResult = windows.shellExecute('open', filePath!);
@@ -41,12 +46,13 @@ class OpenFile {
         _result = -1;
       }
       return OpenResult(
-          type: _result == 0 ? ResultType.done : ResultType.error,
-          message: _result == 0
-              ? "done"
-              : _result == -1
-                  ? "This operating system is not currently supported"
-                  : "there are some errors when open $filePath${Platform.isWindows ? "   HINSTANCE=$_windowsResult" : ""}");
+        type: _result == 0 ? ResultType.done : ResultType.error,
+        message: _result == 0
+            ? "done"
+            : _result == -1
+            ? "This operating system is not currently supported"
+            : "there are some errors when open $filePath${Platform.isWindows ? "   HINSTANCE=$_windowsResult" : ""}",
+      );
     }
 
     Map<String, String?> map = {

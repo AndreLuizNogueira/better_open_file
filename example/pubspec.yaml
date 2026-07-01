@@ -1,20 +1,21 @@
 name: open_file_example
+publish_to: none
 description: Demonstrates how to use the open_file plugin.
 version: 1.0.0+1
 environment:
-  sdk: ">=3.8.1 <4.0.0"
+  sdk: ">=3.12.2"
 
 dependencies:
-  cupertino_icons: 1.0.8
+  cupertino_icons: 1.0.9
   flutter:
     sdk: flutter
+  better_open_file:
+    path: ../
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  better_open_file:
-    path: ../
+  flutter_lints: 6.0.0
 
 flutter:
 
